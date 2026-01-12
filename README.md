@@ -18,3 +18,17 @@ GET /api/referrals/stats
 
 ### Auth Header
 Authorization: Bearer <JWT_TOKEN>
+
+## Live API
+Base URL: https://<your-render-url>
+
+## Setup Instructions
+1. Clone the repo
+2. Run `npm install`
+3. Create `.env` with:
+   - MONGO_URI
+   - JWT_SECRET
+4. Run `npm start`
+
+## Authentication
+Authorization: Bearer <JWT_TOKEN>

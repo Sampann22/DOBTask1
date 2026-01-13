@@ -14,7 +14,16 @@ const limiter = rateLimit({
   max: 100
 });
 app.use(limiter);
-
+app.get("/api", (req, res) => {
+  res.json({
+    message: "Backend API is live",
+    availableRoutes: [
+      "/api/auth",
+      "/api/users",
+      "/api/referrals"
+    ]
+  });
+});
 app.use("/api/auth", require("./routes/auth.routes"));
 app.use("/api/users", require("./routes/user.routes"));
 app.use("/api/referrals", require("./routes/referral.routes"));
